@@ -22,14 +22,13 @@ import {
   LogOutMessage,
   Tokens,
   User,
-} from '../../shared/auth';
+} from '../shared/auth';
 import { CreateAuthDto } from './dto/create-auth.dto';
 import { Request } from 'express';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { AuthGuard } from 'shared/auth.guard';
+import { AuthGuard } from 'src/shared/auth.guard';
 import { SetUserCourseDto } from './dto/set-course.dto';
-import { Course, Courses } from 'shared/course';
-import { DeleteUserCourseDto } from './dto/remove-course.dto';
+import { Course, Courses } from 'src/shared/course';
 
 @ApiTags('Auth')
 @ApiBearerAuth()

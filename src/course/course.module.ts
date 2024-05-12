@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { CourseController } from './course.controller';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { resolve } from 'path';
-import { COURSE_SERVICE_NAME, protobufPackage } from 'shared/course';
+import { COURSE_SERVICE_NAME, protobufPackage } from 'src/shared/course';
 
 @Module({
   imports: [
@@ -13,7 +13,7 @@ import { COURSE_SERVICE_NAME, protobufPackage } from 'shared/course';
         options: {
           url: 'localhost:50000',
           package: protobufPackage,
-          protoPath: [resolve(__dirname, '../../../protos/course.proto')],
+          protoPath: [resolve(__dirname, '../../protos/course.proto')],
         },
       },
     ]),

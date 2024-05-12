@@ -3,7 +3,7 @@ import { Module } from '@nestjs/common';
 import { AuthController } from './auth.controller';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { resolve } from 'path';
-import { AUTH_SERVICE_NAME, protobufPackage } from '../../shared/auth';
+import { AUTH_SERVICE_NAME, protobufPackage } from '../shared/auth';
 
 @Module({
   imports: [
@@ -14,7 +14,7 @@ import { AUTH_SERVICE_NAME, protobufPackage } from '../../shared/auth';
         options: {
           url: 'localhost:50000',
           package: protobufPackage,
-          protoPath: [resolve(__dirname, '../../../protos/auth.proto')],
+          protoPath: [resolve(__dirname, '../../protos/auth.proto')],
         },
       },
     ]),

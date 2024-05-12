@@ -13,10 +13,10 @@ import {
 } from '@nestjs/common';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
-import { COURSE_SERVICE_NAME, CourseServiceClient } from 'shared/course';
+import { COURSE_SERVICE_NAME, CourseServiceClient } from 'src/shared/course';
 import { ClientGrpc } from '@nestjs/microservices';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { AuthGuard } from 'shared/auth.guard';
+import { AuthGuard } from 'src/shared/auth.guard';
 
 @ApiTags('Course')
 @ApiBearerAuth()
